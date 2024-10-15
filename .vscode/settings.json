@@ -3,6 +3,7 @@
     "appwrite",
     "Banm",
     "chartjs",
+    "clsx",
     "countup",
     "dwolla",
     "hookform",
