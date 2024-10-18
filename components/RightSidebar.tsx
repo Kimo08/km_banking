@@ -14,7 +14,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
         <div className="profile">
           <div className="profile-img">
             <span className="text-5xl font-bold text-black-500">
-              {user?.firstName[0]}
+              {user.firstName[0]}
             </span>
           </div>
           <div className="profile-details">
@@ -60,7 +60,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
         <div className="mt-10 flex flex-1 flex-col gap-6">
           <h2 className="header-2">Top categories</h2>
           <div className="space-y-5">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <Category key={category.name} category={category} />
             ))}
           </div>
