@@ -23,11 +23,11 @@ const TransactionHistory = async ({
   const account = await getAccount({ appwriteItemId });
 
   const rowsPerPage = 10;
-  const totalPages = Math.ceil(accounts?.transactions.length / rowsPerPage);
+  const totalPages = Math.ceil(account?.transactions.length / rowsPerPage);
 
   const indexOfLastTransaction = currentPage * rowsPerPage;
   const indexOfFirstTransaction = indexOfLastTransaction - rowsPerPage;
-  const currentTransaction = accounts?.transactions.slice(
+  const currentTransactions = account?.transactions.slice(
     indexOfFirstTransaction,
     indexOfLastTransaction
   );
@@ -61,7 +61,7 @@ const TransactionHistory = async ({
             </div>
           </div>
           <section className="flex w-full flex-col gap-6">
-            <TransactionsTable transactions={currentTransaction} />
+            <TransactionsTable transactions={currentTransactions} />
             {totalPages > 1 && (
               <div className="my-4 w-full">
                 <Pagination totalPages={totalPages} page={currentPage} />

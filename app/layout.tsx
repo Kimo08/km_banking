@@ -40,7 +40,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className={`${inter.variable} ${ibmPlexSerif.variable}`}
+        className={`${inter.variable} ${ibmPlexSerif.variable} dark:bg-medium`}
       >
         {children}
       </body>

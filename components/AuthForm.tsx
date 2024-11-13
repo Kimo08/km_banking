@@ -71,7 +71,7 @@ const AuthForm = ({ type }: { type: string }) => {
   return (
     <section className="auth-form">
       <header className="flex flex-col gap-5 md:gap-8">
-        <Link href="/" className=" flex cursor-pointer items-center gap-1 px-4">
+        <Link href="/" className=" flex cursor-pointer items-center gap-1">
           <Image
             src="/icons/logon.svg"
             width={34}
@@ -201,7 +201,7 @@ const AuthForm = ({ type }: { type: string }) => {
               href={type === "sign-in" ? "/sign-up" : "/sign-in"}
               className="form-link"
             >
-              {type === "sign-in" ? "Sign Up" : "Sign In"}
+              {type === "sign-in" ? "Sign up" : "Sign in"}
             </Link>
           </footer>
         </>
